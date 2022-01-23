@@ -8,3 +8,13 @@ html, body{
 .react{
   color: red;
 }
+button{
+
+width: 100px;
+height: 30px;
+border-radius: 12px;
+border: none;
+background-color: rgb(138, 231, 138);
+cursor: pointer;
+
+}
