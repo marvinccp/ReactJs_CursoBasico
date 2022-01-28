@@ -1,61 +1,74 @@
+const facts = [
+  { fact: '"Declarativo"', id: 1 },
+  { fact: "Mantenido por facebook", id: 2 },
+  { fact: "Fácil de aprender", id: 3 },
+  { fact: "Aprendamos React Juntos!!", id: 4 },
+  { fact: "Proyecto 1 OK", id:5},
+];
+
 class Header extends React.Component {
   constructor(props) {
     super(props);
   }
-  
+
   render() {
     return (
-      <div>
-        <h1>{this.props.name}</h1>
+      <div className="header-container">
+        <img src="../logoreact.png" alt="" />
+        <h3>React Js</h3>
       </div>
     );
   }
 }
 
-const Main = ({ name2 }) =>{
+const Main = ({ children }) => {
+  return <div className="main-container">{children}</div>;
+};
 
-  
-  return <h1>{name2}</h1>
-}
-
-
-const Footer = ({ name3 }) =>{
-  return <h1>{name3}</h1>
-}
+const Footer = ({ name3 }) => {
+  return (
+    <div className='footer-container'>
+      <h4>{name3}</h4>
+    </div>
+  );
+};
 
 const Button = ({ handleClick }) => {
   return <button onClick={handleClick}>Check</button>;
 };
 
-const Page = ({children}) =>{
+const Item = ({ children }) => {
   return (
-    <div> 
+    <div className="facts-container">
+      {facts.map((fact) => {
+        return (
+          <li className="li-facts" key={fact.id}>
+            {fact.fact}
+          </li>
+        );
+      })}
       {children}
     </div>
-  )
-}
-const App = () => {
-
-let name = 'Header'
-let name2 = 'Main'
-let name3 = 'Footer'
-
-const handleClick = () => {
-  alert("Learn React");
+  );
 };
+const App = () => {
+  let name3 = "TEV.Studio 2022"
 
+  const handleClick = () => {
+    alert("Learn React");
+  };
 
   return (
     <div>
-      <Page>
-        <Header name={name} />
+      <Header />
 
-        <Main name2={name2} />
+      <Main>
+        <Item>
+          <Button handleClick={handleClick} />
+        </Item>
+      </Main>
 
-        <Footer name3={name3} />
-      </Page>
-
-      <Button handleClick={handleClick}/>
+      <Footer name3={name3} />
     </div>
   );
 };
