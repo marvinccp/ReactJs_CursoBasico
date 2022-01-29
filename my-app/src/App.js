@@ -10,7 +10,7 @@ const App = () => {
       <Item fact={car.fact} id={car.id} key={car.id} on={car.on} />
     ));
 
-  return <div>{caract}</div>;
+  return (<div>{caract}</div>);
 };
 
 export  {App};
