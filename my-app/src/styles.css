@@ -5,10 +5,10 @@
 
 body {
     padding: 30px;
-    font-size: 25px;
+    font-size: 19px;
 }
 
-.circles-container {
+/* .circles-container {
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -46,4 +46,86 @@ body {
     height: 100px;
     background-color: rgb(0, 242, 255);
     border-radius: 50px;
+} */
+
+/* ------------------- */
+
+.img-product {
+    width: 100%;
+}
+
+.star {
+    width: 10%;
+}
+.card-container{
+    margin: 20px;
+   
+}
+
+.card-container-img {
+    position: relative;
+    display: flex;
+    margin: 40px auto 10px 0;
+
+}
+
+
+.info-container {
+    position: relative;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.info-container h4,
+h5,
+p {
+    margin: 5px 0 0 0;
+}
+
+.info-container h5 {
+    font-size: 20px;
+    color: rgb(81, 81, 81);
+}
+
+.discount {
+    margin-right: 12px;
+    color: rgb(202, 34, 205);
+}
+
+.new {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    top: -35px;
+    color: rgb(45, 226, 48);
+    font-size: 20px;
+}
+
+.header-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    flex-direction: column;
+    margin-bottom: 30px;
+}
+
+.header-container img {
+    height: 120px;
+}
+.header-container h3{
+    color: rgb(141, 141, 141);
+}
+.product-container{
+    display: flex;
+    flex-direction: column;
+    
+}
+
+@media(min-width: 768px){
+    .product-container {
+        display: flex;
+        flex-direction: row;
+    }
 }
