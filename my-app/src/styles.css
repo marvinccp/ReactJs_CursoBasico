@@ -5,7 +5,20 @@
 
 body {
     padding: 30px;
-    font-size: 19px;
+    font-size: 40px;
+}
+.container{
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 20px;
+
+}
+
+.item{
+    font-size: 80px;
 }
 
 /* .circles-container {
